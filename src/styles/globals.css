@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+        --bg1: 248 249 250;
+        --bg2: 251 252 253;
+        --bg3: 230 232 235;
+        --primary: 115 154 240;
+        --onBg: 0 0 0;
+        --onPrim: 255 255 255;
+    }
+
+    .dark {
+        --bg1: 44 44 44;
+        --bg2: 75 75 75;
+        --bg3: 56 56 56;
+        --primary: 115 154 240;
+        --onBg: 255 255 255;
+        --onPrim: 255 255 255;
+    }
+}
