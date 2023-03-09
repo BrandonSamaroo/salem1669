@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+    .app {
+        display: grid;
+        min-height: 100vh;
+        min-height: 100dvh;
+        grid-template-areas:
+            "header"
+            "main";
+        grid-template-rows: auto 1fr;
+    }
+
     :root {
         --bg1: 248 249 250;
         --bg2: 251 252 253;

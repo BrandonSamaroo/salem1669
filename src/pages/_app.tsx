@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import type { AppProps } from "next/app";
 
 import { config as fontAwesomeConfig } from "@fortawesome/fontawesome-svg-core";
 
@@ -7,5 +8,12 @@ import { config as fontAwesomeConfig } from "@fortawesome/fontawesome-svg-core";
 fontAwesomeConfig.autoAddCss = false;
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+    return (
+        <div className='app bg-bg1 text-onBg/80'>
+            <header className='flex flex-wrap items-center justify-center gap-8 border-b-2 border-bg3 py-4'>Salem 1669</header>
+            <main className='relative flex flex-col items-center justify-start scroll-smooth'>
+                <Component {...pageProps} />
+            </main>
+        </div>
+    );
 }
