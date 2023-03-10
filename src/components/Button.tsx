@@ -39,20 +39,28 @@ export const Button = ({ children, onClick, href, internal, btnStyle, btnSize }:
 
     if (!href)
         return (
-            <button className={`${btnSizeUtils} ${btnStyleUtils} border text-center`} type='button' onClick={onClick}>
+            <button
+                className={`${btnSizeUtils} ${btnStyleUtils} inline-flex items-center justify-center border text-center`}
+                type='button'
+                onClick={onClick}
+            >
                 {children}
             </button>
         );
 
     if (internal)
         return (
-            <Link className={`${btnSizeUtils} ${btnStyleUtils} border text-center`} href={href} onClick={onClick}>
+            <Link
+                className={`${btnSizeUtils} ${btnStyleUtils} inline-flex items-center justify-center border text-center`}
+                href={href}
+                onClick={onClick}
+            >
                 {children}
             </Link>
         );
 
     return (
-        <a className={`${btnSizeUtils} ${btnStyleUtils} border text-center`} href={href} onClick={onClick}>
+        <a className={`${btnSizeUtils} ${btnStyleUtils} inline-flex items-center justify-center border text-center`} href={href} onClick={onClick}>
             {children}
         </a>
     );
