@@ -20,6 +20,10 @@
         --primary: 115 154 240;
         --onBg: 0 0 0;
         --onPrim: 255 255 255;
+        --success: 54 211 153;
+        --onSuccess: 0 0 0;
+        --danger: 248 114 114;
+        --onDanger: 0 0 0;
     }
 
     .dark {
@@ -29,5 +33,9 @@
         --primary: 115 154 240;
         --onBg: 255 255 255;
         --onPrim: 255 255 255;
+        --success: 54 211 153;
+        --onSuccess: 0 0 0;
+        --danger: 248 114 114;
+        --onDanger: 0 0 0;
     }
 }
