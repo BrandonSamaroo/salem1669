@@ -13,6 +13,8 @@ type Player = string;
 export default function HomePage() {
     const router = useRouter();
 
+    const gameID = router.query.game_id as string;
+
     // * State for all players in the current lobby
     const [players, setPlayers] = useState<Player[]>(["player1", "player2", "player3"]);
 
@@ -42,9 +44,9 @@ export default function HomePage() {
                     <input
                         className='w-4/5 rounded border border-primary/50 bg-inherit py-2 px-4 text-center text-onBg'
                         type='text'
-                        defaultValue={router.query.game_id}
+                        defaultValue={gameID}
                     />
-                    <Button>
+                    <Button onClick={() => navigator.clipboard.writeText(gameID)}>
                         <FontAwesomeIcon icon={faCopy} className='mr-2' />
                         Copy
                     </Button>
