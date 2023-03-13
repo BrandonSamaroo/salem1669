@@ -121,11 +121,16 @@ export default function HomePage() {
                     <span className='h-full w-1 bg-primary' />
 
                     {/* // * Effects on Current Player */}
-                    <div className='flex h-full flex-col justify-evenly'>
-                        {[faCat, faHeartBroken, faGavel, faShield].map((icon) => (
-                            <FontAwesomeIcon key={icon.iconName} icon={icon} className='text-3xl' />
-                        ))}
-                    </div>
+                    {dummyData[3].effects && (
+                        <>
+                            <span className='h-full w-1 bg-primary' />
+                            <div className='flex h-full flex-col justify-evenly'>
+                                {dummyData[3].effects?.map((effect) => (
+                                    <FontAwesomeIcon key={effect} icon={effectIconMap[effect]} className='text-3xl' />
+                                ))}
+                            </div>
+                        </>
+                    )}
                 </div>
             </div>
         </>
