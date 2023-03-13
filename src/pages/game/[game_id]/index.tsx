@@ -2,21 +2,14 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faCat,
-    faGavel,
-    faHeartBroken,
-    faPersonWalkingArrowRight,
-    faShield,
-    faShieldAlt,
-    faShieldBlank,
-    faShieldHalved,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPersonWalkingArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import { Button } from "@/components/Button";
 import { Timer } from "@/components/Timer";
 import { TryalCard } from "@/components/game/cards/TryalCard";
 import { AccusationCard } from "@/components/game/cards/AccusationCard";
+import { effectIconMap, IPlayerDeck, PlayerDeck } from "@/components/game/PlayerDeck";
+
 // TODO game state needs to include the playing cards that the players hold in their hand
 const dummyData: IPlayerDeck[] = [
     {
@@ -65,17 +58,18 @@ export default function HomePage() {
                 <title>Game | Salem1669</title>
             </Head>
 
-            {/* <div className='grid h-[80vh] w-full grid-cols-4 grid-rows-[repeat(3,minmax(0,30%))] gap-4 p-4'> */}
             <div className='grid h-[90vh] w-full grid-cols-4 grid-rows-3 gap-4 p-4'>
-                {/* <div className='grid h-full w-full grid-cols-4 grid-rows-3 gap-4 p-4'> */}
                 {/* // * Players in Game */}
-                <div className='col-span-2 row-span-2 flex flex-wrap items-center justify-evenly gap-4 overflow-auto rounded-2xl border border-bg3 bg-bg2 p-4 lg:col-span-3'>
-                    <span className='flex h-[200px] w-[400px] rounded-lg border border-bg3 bg-bg1 p-4'>Player Card</span>
-                    <span className='flex h-[200px] w-[400px] rounded-lg border border-bg3 bg-bg1 p-4'>Player Card</span>
-                    <span className='flex h-[200px] w-[400px] rounded-lg border border-bg3 bg-bg1 p-4'>Player Card</span>
-                    <span className='flex h-[200px] w-[400px] rounded-lg border border-bg3 bg-bg1 p-4'>Player Card</span>
-                    <span className='flex h-[200px] w-[400px] rounded-lg border border-bg3 bg-bg1 p-4'>Player Card</span>
-                    <span className='flex h-[200px] w-[400px] rounded-lg border border-bg3 bg-bg1 p-4'>Player Card</span>
+                <div className='col-span-2 row-span-2 flex flex-wrap items-center justify-between gap-4 overflow-auto rounded-2xl border border-bg3 bg-bg2 p-4 md:justify-evenly lg:col-span-3'>
+                    {dummyData.map((player, idx) => (
+                        <PlayerDeck
+                            key={idx}
+                            name={player.name}
+                            effects={player.effects}
+                            accusations={player.accusations}
+                            tryalCards={player.tryalCards}
+                        />
+                    ))}
                 </div>
 
                 {/* // * Global Game Parameters */}
