@@ -17,6 +17,44 @@ import { Button } from "@/components/Button";
 import { Timer } from "@/components/Timer";
 import { TryalCard } from "@/components/game/cards/TryalCard";
 import { AccusationCard } from "@/components/game/cards/AccusationCard";
+// TODO game state needs to include the playing cards that the players hold in their hand
+const dummyData: IPlayerDeck[] = [
+    {
+        name: "Player 1",
+        effects: ["Asylum"],
+        accusations: 0,
+        tryalCards: { Witch: 0, "Not A Witch": 2, Constable: 0 },
+    },
+    {
+        name: "Player 2",
+        effects: ["Matchmaker"],
+        accusations: 4,
+        tryalCards: { Witch: 0, "Not A Witch": 0, Constable: 0 },
+    },
+    {
+        name: "Player 3",
+        effects: ["Matchmaker"],
+        accusations: 3,
+        tryalCards: { Witch: 0, "Not A Witch": 0, Constable: 0 },
+    },
+    {
+        name: "Player 4",
+        effects: ["Black Cat", "Piety"],
+        accusations: 6,
+        tryalCards: { Witch: 0, "Not A Witch": 2, Constable: 1 },
+    },
+    {
+        name: "Player 5",
+        effects: ["Gavel"],
+        accusations: 0,
+        tryalCards: { Witch: 0, "Not A Witch": 1, Constable: 0 },
+    },
+    {
+        name: "Player 6",
+        accusations: 0,
+        tryalCards: { Witch: 0, "Not A Witch": 0, Constable: 0 },
+    },
+];
 
 export default function HomePage() {
     const router = useRouter();
