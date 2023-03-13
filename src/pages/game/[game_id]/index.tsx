@@ -113,12 +113,20 @@ export default function HomePage() {
                     {/* // * Playing Cards */}
                     {/* // TODO make components for Playing Cards */}
                     {/* // TODO remove overflow-hidden and make responsive */}
-                    <div className='flex items-center justify-center gap-4 overflow-hidden'>
-                        <AccusationCard cardType={1} numberOfCards={4} />
-                        <AccusationCard cardType={3} numberOfCards={2} />
-                        <AccusationCard cardType={7} numberOfCards={1} />
+                    <div className='flex items-center justify-center overflow-hidden'>
+                        <figure className='peer relative left-0 flex transition-all hover:z-10 peer-hover:left-12'>
+                            <AccusationCard cardType={1} numberOfCards={4} />
+                        </figure>
+                        <figure className='peer relative left-0 -ml-16 flex transition-all hover:z-10 peer-hover:left-12'>
+                            <AccusationCard cardType={3} numberOfCards={2} />
+                        </figure>
+                        <figure className='peer relative left-0 -ml-16 flex transition-all hover:z-10 peer-hover:left-12'>
+                            <AccusationCard cardType={7} numberOfCards={1} />
+                        </figure>
+                        <figure className='peer relative left-0 -ml-16 flex transition-all hover:z-10 peer-hover:left-12'>
+                            <AccusationCard cardType={7} numberOfCards={1} />
+                        </figure>
                     </div>
-                    <span className='h-full w-1 bg-primary' />
 
                     {/* // * Effects on Current Player */}
                     {dummyData[3].effects && (
