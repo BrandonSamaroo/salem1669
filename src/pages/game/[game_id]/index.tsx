@@ -42,12 +42,13 @@ export default function HomePage() {
 
                 {/* // * Global Game Parameters */}
                 <div className='col-span-2 row-span-2 flex flex-col justify-around gap-6 overflow-auto rounded-2xl border border-bg3 bg-bg2 p-4 lg:col-span-1'>
-                    <div className='flex flex-col items-center justify-center gap-4'>
-                        <Button href='/' internal>
-                            Leave Game
-                            <FontAwesomeIcon icon={faPersonWalkingArrowRight} className='ml-2' />
-                        </Button>
+                    <Button href='/' internal>
+                        Leave Game
+                        <FontAwesomeIcon icon={faPersonWalkingArrowRight} className='ml-2' />
+                    </Button>
+                    <div className='flex items-center justify-center gap-6'>
                         <Timer countdown={60} />
+                        <Button>End Turn</Button>
                     </div>
                     <div className='flex flex-col items-center justify-between gap-4'>
                         <TryalCard cardType='Constable' numberOfCards={1} />
