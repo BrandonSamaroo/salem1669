@@ -51,7 +51,6 @@ export default function HomePage() {
                     </div>
                     <div className='flex flex-col items-center justify-between gap-4'>
                         <TryalCard cardType='Constable' numberOfCards={1} />
-                        <span>Remaining Cards: 8</span>
                         <span>Conspiracy in Deck: No</span>
                         <Button>Draw 2</Button>
                     </div>
