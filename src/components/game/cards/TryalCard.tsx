@@ -1,8 +1,10 @@
+import { TryalCardType } from "@/types/TryalCardType";
+
 // TODO move to separate file
 interface ITryalCard {
     className?: string;
     onClick?: React.MouseEventHandler;
-    cardType: "Not A Witch" | "Witch" | "Constable";
+    cardType: TryalCardType;
     numberOfCards: number;
 }
 
