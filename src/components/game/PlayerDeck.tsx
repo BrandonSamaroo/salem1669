@@ -1,14 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faCat, faHeartBroken, faGavel, faShield, faCross } from "@fortawesome/free-solid-svg-icons";
 
-// * Type of Tryal Cards
-// TODO separate into it's own file for global referencing
-type TryalCardType = "Not A Witch" | "Witch" | "Constable";
+import { PlayingEffectType } from "@/types/PlayingEffectType";
+import { TryalCardType } from "@/types/TryalCardType";
 
 // TODO separate into it's own file for global referencing
-export interface IPlayerDeck {
+interface IPlayerDeck {
     name: string;
-    effects?: Array<"Asylum" | "Black Cat" | "Gavel" | "Matchmaker" | "Piety">;
+    effects?: PlayingEffectType[];
     accusations: number;
     tryalCards: { [key in TryalCardType]: number };
 }
