@@ -4,11 +4,13 @@ import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPersonWalkingArrowRight } from "@fortawesome/free-solid-svg-icons";
 
+import { PlayerData } from "@/types/Database";
+
 import { Button } from "@/components/Button";
 import { Timer } from "@/components/Timer";
 import { TryalCard } from "@/components/game/cards/TryalCard";
 import { AccusationCard } from "@/components/game/cards/AccusationCard";
-import { effectIconMap, IPlayerDeck, PlayerDeck } from "@/components/game/PlayerDeck";
+import { PlayerDeck, effectIconMap } from "@/components/game/PlayerDeck";
 
 // TODO game state needs to include the playing cards that the players hold in their hand
 const dummyData: IPlayerDeck[] = [
