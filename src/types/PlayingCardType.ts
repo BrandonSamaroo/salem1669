@@ -1,13 +1,14 @@
-// TODO add all types of cards
 export type PlayingCardType =
-    | "Asylum"
     | "Accusation"
-    | "Arson"
-    | "Matchmaker"
-    | "Robbery"
-    | "Piety"
-    | "Evidence"
     | "Alibi"
-    | "Scapegoat"
+    | "Arson"
+    | "Asylum"
     | "Black Cat"
-    | "Stocks";
+    | "Curse"
+    | "Evidence"
+    | "Matchmaker"
+    | "Piety"
+    | "Robbery"
+    | "Scapegoat"
+    | "Stocks"
+    | "Witness";
